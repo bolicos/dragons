@@ -1,0 +1,44 @@
+/* COLORS */
+
+$white: white;
+$black: black;
+$background: #f0f0f7;
+$primary: #8257e5;
+$secondary: #04d361;
+
+$primaryLighter: #9871f5;
+$primaryLight: #916bea;
+$primaryDark: #774dd6;
+$primaryDarker: #6842c2;
+$secundaryDark: #04bf58;
+
+$text: #32264d;
+$title: #ffffff;
+$textBase: #6a6180;
+$textPrimary: #d4c2ff;
+$textComplement: #9c98a6;
+
+$lineWhite: #e6e6f0;
+$boxFooter: #fafafc;
+$inputBackground: #f8f8fc;
+
+:export {
+  text: $text;
+  title: $title;
+  white: $white;
+  black: $black;
+  background: $background;
+  primary: $primary;
+  secondary: $secondary;
+  primaryLighter: $primaryLighter;
+  primaryLight: $primaryLight;
+  primary-dark: $primaryDark;
+  primary-darker: $primaryDarker;
+  secundaryDark: $secundaryDark;
+  textPrimary: $textPrimary;
+  textComplement: $textComplement;
+  text-base: $textBase;
+  lineWhite: $lineWhite;
+  inputBackground: $inputBackground;
+  boxFooter: $boxFooter;
+}
