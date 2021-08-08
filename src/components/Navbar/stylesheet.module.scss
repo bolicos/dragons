@@ -1,0 +1,85 @@
+@import "../../assets/stylesheets/global.scss";
+
+.nav {
+  margin: $marginSizeXLarge;
+
+  .show-nav {
+    height: 120px;
+
+    @media screen and (max-width: $sizeMedium) {
+      overflow: hidden;
+      display: none;
+    }
+  }
+
+  .nav-link {
+    align-self: center;
+    position: relative;
+    display: inline;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    color: $white;
+    background-color: $primaryLight;
+    border: 2px solid $primaryLight;
+    border-radius: 0.6em;
+
+    margin: $marginSizeXSmall;
+    padding: 1.2em 2.8em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $fontFamilyBackground;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeMedium;
+
+    &:hover {
+      color: $primaryLight;
+      outline: 0;
+      background-color: $white;
+    }
+
+    @media screen and (max-width: $sizeMedium) {
+      display: table-caption;
+      margin: 5% 5%;
+      padding: 5% 5%;
+    }
+
+    @media screen and (max-width: $sizeSmall) {
+      display: table-caption;
+      margin: 5% 5%;
+      padding: 5% 5%;
+    }
+  }
+
+  @media screen and (max-width: $sizeMedium) {
+    margin: 5% 5%;
+  }
+
+  /* Media screen size */
+  @media screen and (min-width: $sizeMedium) {
+    button {
+      display: none;
+    }
+
+    /*     .links {
+      height: auto;
+      display: flex;
+    }
+
+    li {
+      padding: 0 15px;
+    } */
+  }
+}
+
+/* .links {
+  height: 0;
+  overflow: hidden;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.show-nav {
+    height: 120px;
+} */
