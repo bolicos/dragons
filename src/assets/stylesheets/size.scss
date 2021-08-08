@@ -1,0 +1,41 @@
+/* SIZES */
+
+$sizeSmall: 560px;
+$sizeMedium: 768px;
+$sizeLarge: 1024px;
+$sizeXLarge: 1366px;
+
+$fontSizeXSmall: 0.6rem;
+$fontSizeSmall: 1.2rem;
+$fontSizeMedium: 2rem;
+$fontSizeLarge: 2.8rem;
+$fontSizeXLarge: 3.6rem;
+
+$marginSizeXSmall: 10px;
+$marginSizeSmall: 20px;
+$marginSizeMedium: 30px;
+$marginSizeLarge: 40px;
+$marginSizeXLarge: 50px;
+
+$base: 4;
+
+:export {
+  sizeSmall: $sizeSmall;
+  sizeMedium: $sizeMedium;
+  sizeLarge: $sizeLarge;
+  sizeXLarge: $sizeXLarge;
+
+  fontSizeXSmall: $fontSizeXSmall;
+  fontSizeSmall: $fontSizeSmall;
+  fontSizeMedium: $fontSizeMedium;
+  fontSizeLarge: $fontSizeLarge;
+  fontSizeXLarge: $fontSizeXLarge;
+
+  marginSizeXSmall: $marginSizeXSmall;
+  marginSizeSmall: $marginSizeSmall;
+  marginSizeMedium: $marginSizeMedium;
+  marginSizeLarge: $marginSizeLarge;
+  marginSizeXLarge: $marginSizeXLarge;
+
+  base: $base;
+}

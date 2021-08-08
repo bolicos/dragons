@@ -1,0 +1,23 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$fontWeightLight: 300;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+
+$fontFamily: 'Poppins', sans-serif;
+$fontFamilyBackground: 'Archivo', sans-serif;
+
+:export {
+  fontFamily: $fontFamily;
+  fontFamilyBackground: $fontFamilyBackground;
+  fontWeightLight: $fontWeightLight;
+  fontWeightNormal: $fontWeightNormal;
+  fontWeightMedium: $fontWeightMedium;
+  fontWeightSemiBold: $fontWeightSemiBold;
+  fontWeightBold: $fontWeightBold;
+}
