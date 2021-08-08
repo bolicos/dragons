@@ -1,22 +1,30 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
+import { useHistory } from "react-router-dom";
 import Loader from "@/components/Loader";
 import Title from "@/components/Title";
 import Image from "@/components/Image";
 import { DefaultState } from "@/models/default";
 import LogoImage from "@/assets/images/logo.jpg";
+import Button from "@/components/Button";
+import Container from "@/components/Container";
+import { ROUTES } from "@/helpers/system";
 import stylesheet from "./stylesheet.module.scss";
-import Button from "#/src/components/Button";
 
 interface State extends DefaultState {
   title: string;
 }
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
+  const history = useHistory();
   const [state, setState] = useState<State>({
     pending: true,
     title: "Home",
   });
+
+  function redirect(route: string) {
+    history.push(route);
+  }
 
   useEffect(() => {
     setState((old) => ({
@@ -28,15 +36,15 @@ export const Home: React.FC = () => {
   return state.pending === true ? (
     <Loader />
   ) : (
-    <>
-        <Title name={state.title} />
-        <Image
-          image={LogoImage}
-          alt="logo"
-          className={clsx(stylesheet["logo"])}
-        />
-      <Button>SignIn</Button>
-    </>
+    <Container>
+      <Title name={state.title} />
+      <Image
+        image={LogoImage}
+        alt="logo"
+        className={clsx(stylesheet["logo"])}
+      />
+      <Button onClick={() => redirect(ROUTES.SIGN_IN())}>SignIn</Button>
+    </Container>
   );
 };
 

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "@/helpers/system/constants-variables";
-import { NavbarProps } from "#/src/models/attributes-props";
 import { FaAlignRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "@/helpers/system";
+import { NavbarProps } from "@/models/props";
 import stylesheet from "./stylesheet.module.scss";
 
 export const Navbar: React.FC<NavbarProps> = () => {

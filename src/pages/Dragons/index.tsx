@@ -4,10 +4,11 @@ import Loader from "@/components/Loader";
 import Title from "@/components/Title";
 import { DefaultState } from "@/models/default";
 import Table from "@/components/Table";
+import Container from "@/components/Container";
 import { DragonsAPI } from "@/services/dragons";
 import { DragonsType } from "@/models/dragons";
 import stylesheet from "./stylesheet.module.scss";
-import { TableColumn } from "@/models/attributes-props";
+import { TableColumn } from "#@/models/props";
 
 interface State extends DefaultState {
   title: string;
@@ -44,10 +45,10 @@ export const Dragons: React.FC = () => {
   return state.pending === true ? (
     <Loader />
   ) : (
-    <>
+    <Container>
       <Title name={state.title} />
       <Table contents={state.dragons} columns={columns} className={clsx(stylesheet["dragons"])} />
-    </>
+    </Container>
   );
 };
 

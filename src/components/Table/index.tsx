@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { TableProps } from "@/models/attributes-props";
+import { TableProps } from "@/models/props";
 import stylesheet from "./stylesheet.module.scss";
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleProps } from "@/models/attributes-props";
+import { TitleProps } from "@/models/props";
 import stylesheet from "./stylesheet.module.scss";
 
 export const Title: React.FC<TitleProps> = ({
