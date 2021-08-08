@@ -8,11 +8,14 @@ export interface TitleProps extends React.HTMLAttributes<HTMLTitleElement> {
 }
 
 export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
-  contents: any[];
-  columns: TableColumn[];
+  contents: Array<any>;
+  columns: Array<TableColumn>;
 }
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  column?: boolean;
+  row?: boolean;
+}
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   color?: string;
