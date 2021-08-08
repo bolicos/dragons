@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import { ROUTES } from "./constants-variables";
+import { ROUTES } from "@/helpers/system";
 
 // Components to Routes
 import HomePage from "@/pages/Home";
 import SignInPage from "@/pages/SignIn";
 import DragonsPage from "@/pages/Dragons";
 
-export const Routes: React.FC = () => (
+const Routes: React.FC = () => (
   <BrowserRouter>
-    <Navbar />
     <Switch>
       <Route exact path={ROUTES.HOME()} component={HomePage} />
       <Route exact path={ROUTES.DRAGONS()} component={DragonsPage} />
@@ -21,3 +19,5 @@ export const Routes: React.FC = () => (
     </Switch>
   </BrowserRouter>
 );
+
+export default Routes;
