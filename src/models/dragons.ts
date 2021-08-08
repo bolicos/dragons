@@ -1,5 +1,6 @@
 export interface DragonsType {
-  creationDate: string;
+  createdAt: string;
+  histories: Array<string>;
   name: string;
-  type: string;
+  id: string;
 }
