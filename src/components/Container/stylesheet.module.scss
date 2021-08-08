@@ -1,0 +1,31 @@
+@import "../../assets/stylesheets/global.scss";
+
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+
+    display: flex;
+
+    > * {
+      flex: 1;
+      margin-right: calc(#{$base} * 3);
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  
+    @media (max-width: $sizeSmall) {
+      flex-direction: column;
+  
+      > * {
+        flex: auto;
+  
+        &:not(:last-child) {
+          margin: 0 0 calc(#{$base} * 2) 0;
+        }
+      }
+    }
+}
