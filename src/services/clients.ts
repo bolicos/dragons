@@ -1,4 +1,4 @@
-import axios, { ResponseType } from "axios";
+import axios, { ResponseType, AxiosResponse } from "axios";
 import { WEB_APP } from "@/helpers/system/constants-variables";
 
 const AxiosConfig = {
@@ -13,8 +13,10 @@ const AxiosConfig = {
     },
   },
   responseType: "json" as ResponseType,
-  withCredentials: true,
+  withCredentials: false,
 };
+
+export interface Response<T = any> extends AxiosResponse<T> {}
 
 export const client = axios.create({
   baseURL: AxiosConfig.baseURL,
