@@ -1,0 +1,12 @@
+@import "../../assets/stylesheets/global.scss";
+
+.image {
+  width: 100%;
+  height: auto;
+  margin: $marginSizeXSmall;
+
+  @media screen and (min-width: $sizeLarge) {
+    width: 50%;
+    height: auto;
+  }
+}
