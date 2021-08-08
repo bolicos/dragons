@@ -1,0 +1,18 @@
+@import "../../assets/stylesheets/global.scss";
+
+.title {
+  font-family: $fontFamily;
+  font-size: $fontSizeXLarge;
+
+  color: $primary;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+
+
+@media screen and (max-width: $sizeSmall) {
+  .title {
+    font-size: $fontSizeLarge;
+  }
+}
