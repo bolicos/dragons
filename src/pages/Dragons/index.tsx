@@ -8,7 +8,7 @@ import Container from "@/components/Container";
 import { DragonsAPI } from "@/services/dragons";
 import { DragonsType } from "@/models/dragons";
 import stylesheet from "./stylesheet.module.scss";
-import { TableColumn } from "#@/models/props";
+import { TableColumn } from "@/models/props";
 
 interface State extends DefaultState {
   title: string;
