@@ -1,14 +1,14 @@
 import React from "react";
 import clsx from "clsx";
-import { LoaderProps } from "#/src/models/attributes-props";
+import { LoaderProps } from "@/models/props";
 import stylesheet from "./stylesheet.module.scss";
 
 export const Loader: React.FC<LoaderProps> = ({
-  color = "#7f58af",
+  color = "#9871f5",
   className,
   ...props
 }) => {
-  
+
   const circles = [...Array(12)].map((_, index) => {
     return (
       <div key={index}>

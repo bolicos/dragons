@@ -1,5 +1,5 @@
 import axios, { ResponseType, AxiosResponse } from "axios";
-import { WEB_APP } from "@/helpers/system/constants-variables";
+import { WEB_APP } from "@/helpers/system";
 
 const AxiosConfig = {
   baseURL: WEB_APP.API_BASE_URL,
