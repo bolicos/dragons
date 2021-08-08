@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as LogoImage } from "@/assets/images/logo.svg";
+import clsx from "clsx";
 import stylesheet from "./stylesheet.module.scss";
 import { DefaultState } from "@/models/default";
 import Loader from "@/components/Loader";
-import Container from "#/src/components/Container";
+import Image from "@/components/Image";
+import LogoImage from "@/assets/images/logo.jpg";
 import Title from "#/src/components/Title";
 
 interface State extends DefaultState {
@@ -26,10 +27,14 @@ export const SignIn: React.FC = () => {
   return state.pending === true ? (
     <Loader />
   ) : (
-    <Container>
-      <LogoImage />
-      <Title name={state.title} className={stylesheet[""]} />
-    </Container>
+    <>
+      <Title name={state.title} />
+      <Image
+        image={LogoImage}
+        alt="logo"
+        className={clsx(stylesheet["logo"])}
+      />
+    </>
   );
 };
 
