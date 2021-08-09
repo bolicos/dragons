@@ -6,13 +6,13 @@ import { DefaultState } from "@/models/default";
 import Table from "@/components/Table";
 import Container from "@/components/Container";
 import { DragonsAPI } from "@/services/dragons";
-import { DragonsType } from "@/models/dragons";
+import { DragonModel } from "@/models/dragons";
 import stylesheet from "./stylesheet.module.scss";
-import { TableColumn } from "@/models/props";
+import { GenericModel } from "@/models/props";
 
 interface State extends DefaultState {
   title: string;
-  dragons: DragonsType[];
+  dragons: DragonModel[];
 }
 
 export const Dragons: React.FC = () => {
@@ -22,7 +22,7 @@ export const Dragons: React.FC = () => {
     dragons: [],
   });
 
-  const columns: TableColumn[] = [
+  const columns: GenericModel[] = [
     { title: "Name", function: "name" },
     { title: "Created At", function: "createdAt" },
     { title: "Histories", function: "histories" },
@@ -31,7 +31,7 @@ export const Dragons: React.FC = () => {
   const dragonsList = useCallback(() => {
     DragonsAPI.list()
       .then((response) => {
-        const dragons: DragonsType[] = response.data;
+        const dragons: DragonModel[] = response.data;
         setState((old) => ({ ...old, dragons: dragons }));
       })
       .catch((exception) => console.log("API error: ", exception))
