@@ -36,7 +36,7 @@ const Home: React.FC = () => {
   return state.pending === true ? (
     <Loader />
   ) : (
-    <Container>
+    <Container className={stylesheet["home"]}>
       <Title name={state.title} />
       <Image
         image={LogoImage}
