@@ -7,6 +7,7 @@ import SignInPage from "@/pages/SignIn";
 import DragonsPage from "@/pages/Dragons";
 import DetailsDragonPage from "@/pages/DetailsDragon";
 import EditDragonPage from "@/pages/EditDragon";
+import CreateDragonPage from "@/pages/CreateDragon";
 
 const Routes: React.FC = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Routes: React.FC = () => (
       <Route exact path={ROUTES.DRAGONS()} component={DragonsPage} />
       <Route exact path={ROUTES.DETAILS_DRAGON(":id")} component={DetailsDragonPage} />
       <Route exact path={ROUTES.EDIT_DRAGON(":id")} component={EditDragonPage} />
+      <Route exact path={ROUTES.CREATE_DRAGON()} component={CreateDragonPage} />
       <Route exact path={ROUTES.SIGN_IN()} component={SignInPage} />
       <Route exact path={ROUTES.NOT_FOUND()} component={HomePage} />
       <Route exact path={ROUTES.ERROR()} component={HomePage} />

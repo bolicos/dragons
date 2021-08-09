@@ -2,6 +2,10 @@ export interface GenericModel {
   title: string;
   function: string;
 }
+export interface DetailsProps {
+  content: any;
+  columns: GenericModel[];
+}
 
 export interface EditProps {
   content: any;
@@ -9,9 +13,10 @@ export interface EditProps {
   onConfirmEditDragon: (body: any) => void;
 }
 
-export interface DetailsProps {
+export interface CreateProps {
   content: any;
   columns: GenericModel[];
+  onConfirmCreateDragon: (body: any) => void;
 }
 
 export interface TitleProps extends React.HTMLAttributes<HTMLTitleElement> {
