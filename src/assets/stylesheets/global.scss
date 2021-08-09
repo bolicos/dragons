@@ -2,7 +2,8 @@
 @import "font.scss";
 @import "size.scss";
 
-html, body {
+html,
+body {
   z-index: 1;
   margin: 0;
   padding: 0;
@@ -18,11 +19,48 @@ body,
 span,
 label,
 input,
-button,
 textarea {
   font-size: 1.2rem;
   font-family: $fontFamilyBackground;
   color: $textBase;
   width: 100%;
   text-align: center;
+}
+
+button {
+  margin: 25px;
+  padding: 1.2em 2.8em;
+
+  cursor: pointer;
+  align-self: center;
+
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+
+  border-radius: 0.6em;
+  border: 2px solid $primaryDarker;
+  color: $primaryDarker;
+
+  line-height: 1;
+
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $fontWeightSemiBold;
+  font-size: $fontSizeSmall;
+
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px $primaryDarker inset;
+  }
+
+  @media screen and (min-width: $sizeLarge) {
+    width: 275px;
+    font-size: $fontSizeSmall;
+  }
 }

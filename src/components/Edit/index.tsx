@@ -4,29 +4,18 @@ import { useHistory } from "react-router-dom";
 import Button from "@/components/Button";
 import { EditProps } from "@/models/props";
 import { ROUTES } from "@/helpers/system";
-import { DragonModel } from "#/src/models/dragons";
+import { DragonModel } from "@/models/dragons";
 
-
-export const Edit: React.FC<EditProps> = ({
-  content,
-  columns,
-  onConfirmEditDragon,
-  ...props
-}) => {
+export const Edit: React.FC<EditProps> = ({ content, columns, onConfirmEditDragon, ...props }) => {
   const history = useHistory();
 
-  const {
-    handleBlur,
-    handleSubmit,
-    handleChange,
-    values,
-  } = useFormik({
+  const { handleBlur, handleSubmit, handleChange, values } = useFormik({
     initialValues: {
       createdAt: content.createdAt,
       histories: content.histories,
       name: content.name,
       type: content.type,
-      id: content.id
+      id: content.id,
     },
     onSubmit: (dragon: DragonModel) => {
       onConfirmEditDragon(dragon);
@@ -49,30 +38,12 @@ export const Edit: React.FC<EditProps> = ({
         onChange={handleChange}
       />
       <label htmlFor="histories">Histories</label>
-      <input
-        required
-        id="histories"
-        name="histories"
-        value={values.histories}
-        onChange={handleChange}
-      />
+      <input required id="histories" name="histories" value={values.histories} onChange={handleChange} />
       <label htmlFor="name">Name</label>
-      <input
-        required
-        id="name"
-        name="name"
-        value={values.name}
-        onChange={handleChange}
-      />
+      <input required id="name" name="name" value={values.name} onChange={handleChange} />
       <label htmlFor="type">Type</label>
-      <input
-        required
-        id="type"
-        name="type"
-        value={values.type}
-        onChange={handleChange}
-      />
-      <Button onClick={() => redirect(ROUTES.DRAGONS_LIST())}>Voltar</Button>
+      <input required id="type" name="type" value={values.type} onChange={handleChange} />
+      <Button onClick={() => redirect(ROUTES.DRAGONS_LIST())}>Back</Button>
       <button type="submit">Submit</button>
     </form>
   );

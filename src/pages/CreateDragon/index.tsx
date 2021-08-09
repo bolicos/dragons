@@ -31,7 +31,7 @@ export const CreateDragon: React.FC = () => {
       .then(() => setState((old) => ({ ...old })))
       .catch((exception) => console.log("API error: ", exception))
       .finally(() => setState((old) => ({ ...old, pending: false })));
-  };
+  }
 
   return state.pending === true ? (
     <Loader />

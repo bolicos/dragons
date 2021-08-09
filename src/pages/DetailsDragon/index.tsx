@@ -28,7 +28,6 @@ export const DetailsDragon: React.FC = () => {
     { title: "Histories", function: "histories" },
   ];
 
-
   const detailsDragon = useCallback(() => {
     DragonsAPI.details(id)
       .then((response) => {

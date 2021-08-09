@@ -4,11 +4,10 @@ import Loader from "@/components/Loader";
 import Title from "@/components/Title";
 import { DefaultState } from "@/models/default";
 import Table from "@/components/Table";
-import Container from "@/components/Container";
 import { DragonsAPI } from "@/services/dragons";
 import { DragonModel } from "@/models/dragons";
-import stylesheet from "./stylesheet.module.scss";
 import { GenericModel } from "@/models/props";
+import stylesheet from "./stylesheet.module.scss";
 
 interface State extends DefaultState {
   title: string;
@@ -48,18 +47,23 @@ export const DragonsList: React.FC = () => {
       .then(() => setState((old) => ({ ...old })))
       .catch((exception) => console.log("API error: ", exception))
       .finally(() => {
-        setState((old) => ({ ...old, pending: false }))
-        window.location.reload()
+        setState((old) => ({ ...old, pending: false }));
+        window.location.reload();
       });
   }
 
   return state.pending === true ? (
     <Loader />
   ) : (
-    <Container>
+    <>
       <Title name={state.title} />
-      <Table contents={state.dragons} columns={columns} className={clsx(stylesheet["dragons"])} onConfirmDeleteDragon={deleteDragon} />
-    </Container>
+      <Table
+        contents={state.dragons}
+        columns={columns}
+        className={clsx(stylesheet["dragons"])}
+        onConfirmDeleteDragon={deleteDragon}
+      />
+    </>
   );
 };
 

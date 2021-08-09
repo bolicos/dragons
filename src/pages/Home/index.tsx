@@ -7,7 +7,6 @@ import Image from "@/components/Image";
 import { DefaultState } from "@/models/default";
 import LogoImage from "@/assets/images/logo.jpg";
 import Button from "@/components/Button";
-import Container from "@/components/Container";
 import { ROUTES } from "@/helpers/system";
 import stylesheet from "./stylesheet.module.scss";
 
@@ -36,15 +35,13 @@ const Home: React.FC = () => {
   return state.pending === true ? (
     <Loader />
   ) : (
-    <Container className={stylesheet["home"]}>
+    <>
       <Title name={state.title} />
-      <Image
-        image={LogoImage}
-        alt="logo"
-        className={clsx(stylesheet["logo"])}
-      />
-      <Button onClick={() => redirect(ROUTES.SIGN_IN())}>SignIn</Button>
-    </Container>
+      <Image image={LogoImage} alt="logo" className={clsx(stylesheet["logo"])} />
+      <div>
+        <Button onClick={() => redirect(ROUTES.SIGN_IN())}>SignIn</Button>
+      </div>
+    </>
   );
 };
 
