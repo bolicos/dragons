@@ -33,7 +33,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   color?: string;
 }
 
-export interface NavbarProps extends React.HTMLAttributes<HTMLHtmlElement> { }
+export interface NavbarProps extends React.HTMLAttributes<HTMLHtmlElement> {}
 
 export interface LoaderProps extends React.HTMLAttributes<HTMLHtmlElement> {
   color?: string;

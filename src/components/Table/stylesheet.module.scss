@@ -19,7 +19,6 @@ table {
   font-weight: normal;
   font-size: 12px;
   padding: 8px 15px;
-  line-height: 20px;
   text-align: left;
   vertical-align: middle;
   border-top: 1px solid #dddddd;
@@ -29,6 +28,20 @@ table {
   justify-content: normal;
   align-content: normal;
   flex-wrap: nowrap;
+}
+
+th {
+  padding-right: 20px;
+}
+
+td {
+  padding-right: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 @media (max-width: 767px) {

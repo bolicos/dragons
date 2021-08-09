@@ -9,8 +9,8 @@ export const ENDPOINTS = {
   EDIT_BY_ID: (id: string) => `/api/v1/dragon/${id}`,
 };
 
-interface List<T> extends Promise<Response<Array<T>>> { }
-interface Object<T> extends Promise<Response<T>> { }
+interface List<T> extends Promise<Response<Array<T>>> {}
+interface Object<T> extends Promise<Response<T>> {}
 
 export const DragonsAPI = {
   list: (): List<DragonModel> => client.get<Array<DragonModel>>(ENDPOINTS.LIST()),

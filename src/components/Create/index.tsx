@@ -2,11 +2,11 @@ import React from "react";
 import { useFormik } from "formik";
 import { useHistory } from "react-router-dom";
 import Button from "@/components/Button";
-import { EditProps } from "@/models/props";
+import { CreateProps } from "@/models/props";
 import { ROUTES } from "@/helpers/system";
-import { DragonModel } from "@/models/dragons";
+import { DragonModel } from "#/src/models/dragons";
 
-export const Edit: React.FC<EditProps> = ({ content, columns, onConfirmEditDragon, ...props }) => {
+export const Create: React.FC<CreateProps> = ({ content, columns, onConfirmCreateDragon, ...props }) => {
   const history = useHistory();
 
   const { handleBlur, handleSubmit, handleChange, values } = useFormik({
@@ -18,7 +18,7 @@ export const Edit: React.FC<EditProps> = ({ content, columns, onConfirmEditDrago
       id: content.id,
     },
     onSubmit: (dragon: DragonModel) => {
-      onConfirmEditDragon(dragon);
+      onConfirmCreateDragon(dragon);
     },
   });
 
@@ -49,4 +49,4 @@ export const Edit: React.FC<EditProps> = ({ content, columns, onConfirmEditDrago
   );
 };
 
-export default Edit;
+export default Create;

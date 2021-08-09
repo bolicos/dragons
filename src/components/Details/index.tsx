@@ -6,12 +6,7 @@ import { DetailsProps } from "@/models/props";
 import stylesheet from "./stylesheet.module.scss";
 import { ROUTES } from "@/helpers/system";
 
-
-export const Details: React.FC<DetailsProps> = ({
-  content,
-  columns,
-  ...props
-}) => {
+export const Details: React.FC<DetailsProps> = ({ content, columns, ...props }) => {
   const history = useHistory();
 
   function redirect(route: string) {
@@ -31,7 +26,7 @@ export const Details: React.FC<DetailsProps> = ({
         <td>{content.createdAt}</td>
         <td>{content.histories}</td>
       </tr>
-      <Button onClick={() => redirect(ROUTES.DRAGONS())}>Voltar</Button>
+      <Button onClick={() => redirect(ROUTES.DRAGONS_LIST())}>Back</Button>
     </div>
   );
 };

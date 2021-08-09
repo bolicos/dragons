@@ -4,5 +4,5 @@ export interface DefaultState {
 
 export enum Order {
   ASCENDING = "asc",
-  DECREASING = "desc"
+  DECREASING = "desc",
 }
