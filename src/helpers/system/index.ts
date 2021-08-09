@@ -7,7 +7,7 @@ export const WEB_APP = {
 
 export const ROUTES = {
   HOME: () => "/",
-  DRAGONS: () => "/dragons",
+  DRAGONS_LIST: () => "/dragons",
   DETAILS_DRAGON: (id: string) => `/dragons/${id}/details`,
   EDIT_DRAGON: (id: string) => `/dragons/${id}/edit`,
   CREATE_DRAGON: () => "/dragons/create",

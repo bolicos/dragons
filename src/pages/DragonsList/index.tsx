@@ -15,15 +15,16 @@ interface State extends DefaultState {
   dragons: DragonModel[];
 }
 
-export const Dragons: React.FC = () => {
+export const DragonsList: React.FC = () => {
   const [state, setState] = useState<State>({
     pending: true,
-    title: "Dragons",
+    title: "Dragons list",
     dragons: [],
   });
 
   const columns: GenericModel[] = [
     { title: "Name", function: "name" },
+    { title: "Type", function: "type" },
     { title: "Created At", function: "createdAt" },
     { title: "Histories", function: "histories" },
   ];
@@ -62,4 +63,4 @@ export const Dragons: React.FC = () => {
   );
 };
 
-export default Dragons;
+export default DragonsList;

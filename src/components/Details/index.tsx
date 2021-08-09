@@ -31,7 +31,7 @@ export const Details: React.FC<DetailsProps> = ({
         <td>{content.createdAt}</td>
         <td>{content.histories}</td>
       </tr>
-      <Button onClick={() => redirect(ROUTES.DRAGONS())}>Voltar</Button>
+      <Button onClick={() => redirect(ROUTES.DRAGONS_LIST())}>Voltar</Button>
     </div>
   );
 };

@@ -72,7 +72,7 @@ export const Create: React.FC<CreateProps> = ({
         value={values.type}
         onChange={handleChange}
       />
-      <Button onClick={() => redirect(ROUTES.DRAGONS())}>Voltar</Button>
+      <Button onClick={() => redirect(ROUTES.DRAGONS_LIST())}>Voltar</Button>
       <button type="submit">Submit</button>
     </form>
   );
