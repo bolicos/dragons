@@ -2,22 +2,22 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "@/components/Loader";
 import Title from "@/components/Title";
+import Edit from "@/components/Edit";
 import { DefaultState } from "@/models/default";
 import { DragonsAPI } from "@/services/dragons";
 import { DragonModel } from "@/models/dragons";
 import { GenericModel } from "@/models/props";
-import Details from "@/components/Details";
 
 interface State extends DefaultState {
   title: string;
   dragon: DragonModel;
 }
 
-export const DetailsDragon: React.FC = () => {
+export const EditDragon: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [state, setState] = useState<State>({
     pending: true,
-    title: "Details dragon",
+    title: "Edit dragon",
     dragon: {} as DragonModel,
   });
 
@@ -27,7 +27,6 @@ export const DetailsDragon: React.FC = () => {
     { title: "Created At", function: "createdAt" },
     { title: "Histories", function: "histories" },
   ];
-
 
   const detailsDragon = useCallback(() => {
     DragonsAPI.details(id)
@@ -43,14 +42,23 @@ export const DetailsDragon: React.FC = () => {
     detailsDragon();
   }, [detailsDragon]);
 
+  const editDragon = useCallback(() => {
+    DragonsAPI.edit(id, state.dragon)
+      .then(() => {
+        setState((old) => ({ ...old }));
+      })
+      .catch((exception) => console.log("API error: ", exception))
+      .finally(() => setState((old) => ({ ...old, pending: false })));
+  }, [id, state.dragon]);
+
   return state.pending === true ? (
     <Loader />
   ) : (
     <>
       <Title name={state.title} />
-      <Details content={state.dragon} columns={columns} />
+      <Edit content={state.dragon} columns={columns} onConfirmEditDragon={editDragon} />
     </>
   );
 };
 
-export default DetailsDragon;
+export default EditDragon;
