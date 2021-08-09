@@ -11,18 +11,18 @@
     > * {
       flex: 1;
       margin-right: calc(#{$base} * 3);
-  
+
       &:last-child {
         margin-right: 0;
       }
     }
-  
-    @media (max-width: $sizeSmall) {
+
+    @media (max-width: $sizeLarge) {
       flex-direction: column;
-  
+
       > * {
         flex: auto;
-  
+
         &:not(:last-child) {
           margin: 0 0 calc(#{$base} * 2) 0;
         }

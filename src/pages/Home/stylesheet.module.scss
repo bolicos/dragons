@@ -1,5 +1,9 @@
 @import "../../assets/stylesheets/global.scss";
 
+.home {
+  flex-direction: column;
+}
+
 .logo {
   border-radius: 65px;
 }
