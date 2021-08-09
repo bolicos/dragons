@@ -1,5 +1,5 @@
 import { client, Response } from "./clients";
-import { DragonsType } from "@/models/dragons";
+import { DragonModel } from "@/models/dragons";
 
 export const ENDPOINTS = {
   LIST: () => "/api/v1/dragon",
@@ -13,9 +13,9 @@ interface List<T> extends Promise<Response<Array<T>>> {}
 interface Object<T> extends Promise<Response<T>> {}
 
 export const DragonsAPI = {
-  list: (): List<DragonsType> => client.get<Array<DragonsType>>(ENDPOINTS.LIST()),
+  list: (): List<DragonModel> => client.get<Array<DragonModel>>(ENDPOINTS.LIST()),
   delete: (id: string): Object<void> => client.delete(ENDPOINTS.DELETE_BY_ID(id)),
-  details: (id: string): Object<DragonsType> => client.get(ENDPOINTS.FIND_BY_ID(id)),
-  create: (body: DragonsType): Object<DragonsType> => client.post(ENDPOINTS.CREATE(), body),
-  update: (body: DragonsType, id: string): Object<DragonsType> => client.put(ENDPOINTS.UPDATE_BY_ID(id), body),
+  details: (id: string): Object<DragonModel> => client.get(ENDPOINTS.FIND_BY_ID(id)),
+  create: (body: DragonModel): Object<DragonModel> => client.post(ENDPOINTS.CREATE(), body),
+  update: (body: DragonModel, id: string): Object<DragonModel> => client.put(ENDPOINTS.UPDATE_BY_ID(id), body),
 };
