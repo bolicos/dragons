@@ -1,6 +1,11 @@
-export interface TableColumn {
+export interface GenericModel {
   title: string;
   function: string;
+}
+
+export interface DetailsProps {
+  content: any;
+  details: GenericModel[];
 }
 
 export interface TitleProps extends React.HTMLAttributes<HTMLTitleElement> {
@@ -9,7 +14,7 @@ export interface TitleProps extends React.HTMLAttributes<HTMLTitleElement> {
 
 export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
   contents: Array<any>;
-  columns: Array<TableColumn>;
+  columns: Array<GenericModel>;
 }
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
