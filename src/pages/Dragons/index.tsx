@@ -42,12 +42,22 @@ export const Dragons: React.FC = () => {
     dragonsList();
   }, [dragonsList]);
 
+  function deleteDragon(id: string) {
+    DragonsAPI.delete(id)
+      .then(() => setState((old) => ({ ...old })))
+      .catch((exception) => console.log("API error: ", exception))
+      .finally(() => {
+        setState((old) => ({ ...old, pending: false }))
+        window.location.reload()
+      });
+  }
+
   return state.pending === true ? (
     <Loader />
   ) : (
     <Container>
       <Title name={state.title} />
-      <Table contents={state.dragons} columns={columns} className={clsx(stylesheet["dragons"])} />
+      <Table contents={state.dragons} columns={columns} className={clsx(stylesheet["dragons"])} onConfirmDeleteDragon={deleteDragon} />
     </Container>
   );
 };
