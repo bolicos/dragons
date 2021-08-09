@@ -42,21 +42,28 @@ export const EditDragon: React.FC = () => {
     detailsDragon();
   }, [detailsDragon]);
 
-  const editDragon = useCallback(() => {
-    DragonsAPI.edit(id, state.dragon)
-      .then(() => {
-        setState((old) => ({ ...old }));
-      })
-      .catch((exception) => console.log("API error: ", exception))
-      .finally(() => setState((old) => ({ ...old, pending: false })));
-  }, [id, state.dragon]);
+  const editDragon = useCallback(
+    (body: DragonModel) => {
+      DragonsAPI.edit(id, body)
+        .then(() => {
+          setState((old) => ({ ...old }));
+        })
+        .catch((exception) => console.log("API error: ", exception))
+        .finally(() => setState((old) => ({ ...old, pending: false })));
+    },
+    [id]
+  );
 
   return state.pending === true ? (
     <Loader />
   ) : (
     <>
       <Title name={state.title} />
-      <Edit content={state.dragon} columns={columns} onConfirmEditDragon={editDragon} />
+      <Edit
+        content={state.dragon}
+        columns={columns}
+        onConfirmEditDragon={editDragon}
+      />
     </>
   );
 };
