@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect } from "react";
 import clsx from "clsx";
 import { useHistory } from "react-router-dom";
+import { FiEdit, FiTrash2, FiArrowRightCircle } from "react-icons/fi";
 import { ImSortAlphaAsc, ImSortAlphaDesc } from "react-icons/im";
-import { FiTrash2, FiEdit, FiArrowRightCircle } from "react-icons/fi";
 import Button from "@/components/Button";
 import { TableProps } from "@/models/props";
 import { Order } from "@/models/default";
@@ -24,8 +24,8 @@ export const Table: React.FC<TableProps> = ({ contents, columns, onConfirmDelete
   }
 
   const orderedContent = useCallback(() => {
-    const ordered = (order === Order.ASCENDING) ? orderListByProperty(orderedContents, "name") : orderedContents.reverse();
-
+    const ordered =
+      order === Order.ASCENDING ? orderListByProperty(orderedContents, "name") : orderedContents.reverse();
     setOrderedContents(ordered);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [order]);

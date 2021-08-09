@@ -10,7 +10,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
   const pages = new Map<string, string>();
 
   pages.set(ROUTES.HOME(), "Home");
-  pages.set(ROUTES.DRAGONS(), "Dragons");
+  pages.set(ROUTES.DRAGONS_LIST(), "Dragons");
   pages.set(ROUTES.SIGN_IN(), "SignIn");
 
   return (
