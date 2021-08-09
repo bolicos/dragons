@@ -3,6 +3,6 @@ export interface DefaultState {
 }
 
 export enum Order {
-  ASCENDING,
-  DECREASING
+  ASCENDING = "asc",
+  DECREASING = "desc"
 }
