@@ -9,7 +9,7 @@ import { ROUTES } from "@/helpers/system";
 
 export const Details: React.FC<DetailsProps> = ({
   content,
-  details,
+  columns,
   ...props
 }) => {
   const history = useHistory();
@@ -21,8 +21,8 @@ export const Details: React.FC<DetailsProps> = ({
   return (
     <div className={clsx(stylesheet["div"])}>
       <tr>
-        {details.map((detail) => (
-          <th>{detail.title}</th>
+        {columns.map((column) => (
+          <th>{column.title}</th>
         ))}
       </tr>
       <tr>

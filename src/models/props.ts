@@ -3,9 +3,15 @@ export interface GenericModel {
   function: string;
 }
 
+export interface EditProps {
+  content: any;
+  columns: GenericModel[];
+  onConfirmEditDragon: (body: any) => void;
+}
+
 export interface DetailsProps {
   content: any;
-  details: GenericModel[];
+  columns: GenericModel[];
 }
 
 export interface TitleProps extends React.HTMLAttributes<HTMLTitleElement> {
