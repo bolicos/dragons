@@ -1,15 +1,25 @@
-# REACT WEBSITE **DRAGONS**
+# REACT WEBSITE **DRAGONS** <img src="https://img.icons8.com/emoji/50/000000/dragon-emoji.png"/>
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/analuciabolico/dragons)
 
 ---
 
-### Description
+
+## Table of contents:
+
+* [Description](#description)
+* [Project Rules](#project-rules)
+* [Pre Requirements](#pre-requirements)
+* [Instalation](#instalation)
+
+---
+
+## Description
 This is the Dragons application website.
 
 ---
 
-### Project Rules
+## Project Rules
 
 [Labels list](https://github.com/analuciabolico/dragons/labels) that used in the PR's names and also in the commit message.
 
@@ -30,3 +40,57 @@ git commit -m "CONFIG -- add package.json and tsconfig.json"
 Where "CONFIG" is the *__label__* and "--" is the *__separation__* and the remaining is the message itself.
 
 ---
+
+## Pre Requirements
+
+In this projejct was used NodeJs LTS(v14.17.04/fermium)
+
+[git](https://git-scm.com)\
+[nodeJs Oficial](https://nodejs.org/en/)\
+[nodeJs and NPM via NVM](https://github.com/nvm-sh/nvm) - I recommend install vis NPM\
+[vscode](https://code.visualstudio.com)
+
+---
+
+## Instalation
+
+I will mention bellow the steps necessary to run the project locally.
+
+First step:
+```bash
+git clone https://github.com/analuciabolico/dragons.git
+```
+Second step:
+```bash
+cd dragons
+```
+
+### These next steps can to be executed by two aways:
+
+- With npm only
+
+Third step:
+```bash
+npm i
+```
+Fourth step:
+```bash
+npm start
+```
+
+- With yarn
+
+Third step:
+```bash
+npm install -g yarn
+```
+Fourth step:
+```bash
+yarn install
+```
+Fifth step:
+```bash
+yarn start
+```
+
+### Okay, from that you can access the [link](http://localhost:3000) in your browser and test the application.
