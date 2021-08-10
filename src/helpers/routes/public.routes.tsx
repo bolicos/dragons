@@ -14,8 +14,6 @@ const PrivateRoutes: React.FC<UserProps> = ({ user, setUser, setIsSignIn }) => (
       render={() => <SignInPage setUser={setUser} user={user} setIsSignIn={setIsSignIn} />}
     />
     <Route exact path={ROUTES.HOME()} component={HomePage} />
-    <Route exact path={ROUTES.NOT_FOUND()} component={HomePage} />
-    <Route exact path={ROUTES.ERROR()} component={HomePage} />
   </>
 );
 
