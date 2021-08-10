@@ -28,11 +28,11 @@ const Mirage = () =>
             "TYwMCwiaXNzIjoiaHR0cHM6Ly9mYWtlYXV0aC5t" +
             "b2NrYXBpLmlvIiwiYXVkIjoiaHR0cHM6Ly9naXR" +
             "odWIuY29tL2FuYWx1Y2lhYm9saWNvL2RyYWdvbn" +
-            "MiLCJzdWIiOiJUb2tlbiBKV1QiLCJhcHBsaWNhd"+
-            "GlvbklkIjoiYW5hbHVjaWFib2xpY28vZHJhZ29u"+
-            "cyIsInVzZXJuYW1lIjoiZHJhZ29uIiwicm9sZXM"+
-            "iOlsiVklFVyIsIkVESVQiLCJERUxFVEUiLCJORV"+
-            "ciXX0.PMy5B6ttzpYo0Za7JYnN5NLkdZEm-"+
+            "MiLCJzdWIiOiJUb2tlbiBKV1QiLCJhcHBsaWNhd" +
+            "GlvbklkIjoiYW5hbHVjaWFib2xpY28vZHJhZ29u" +
+            "cyIsInVzZXJuYW1lIjoiZHJhZ29uIiwicm9sZXM" +
+            "iOlsiVklFVyIsIkVESVQiLCJERUxFVEUiLCJORV" +
+            "ciXX0.PMy5B6ttzpYo0Za7JYnN5NLkdZEm-" +
             "SeewS4Ltq3k6og",
         };
 

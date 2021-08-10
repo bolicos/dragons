@@ -14,15 +14,15 @@ export interface TokenModel {
 }
 
 export type Token = {
-    iat: string;
-    exp: string;
-    iss: string;
-    aud: string;
-    sub: string;
-    username: string;
-    applicationId: string,
-    roles: Array<string>;
-}
+  iat: string;
+  exp: string;
+  iss: string;
+  aud: string;
+  sub: string;
+  username: string;
+  applicationId: string;
+  roles: Array<string>;
+};
 
 export type UserPrincipal = {
   name: string;
