@@ -25,7 +25,7 @@ jobs:
     - name: Install
       run: npm i
     - name: Prettier
-      run: npm run pretier:lint
+      run: npm run prettier:lint
     - name: Build
       run: npm run build
     - name: Test
