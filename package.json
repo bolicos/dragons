@@ -2,8 +2,8 @@
   "name": "dragons",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "https://github.com/analuciabolico/dragons",
-  "author": "analuciabolico <analuciabolico.dev@gmail.com>",
+  "repository": "https://github.com/bolicos/dragons",
+  "author": "bolicos",
   "private": true,
   "scripts": {
     "start": "react-app-rewired start",
