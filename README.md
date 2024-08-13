@@ -1,9 +1,9 @@
 # REACT WEBSITE **DRAGONS** <img src="https://img.icons8.com/emoji/50/000000/dragon-emoji.png"/>
 
-[![NodeJS with Webpack](https://github.com/bolicos/dragons/workflows/pipeline/badge.svg)](https://github.com/analuciabolico/dragons/actions/workflows/webpack.yml)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/analuciabolico/dragons)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/analuciabolico/dragons?style=flat-square)
-![GitHub](https://img.shields.io/github/license/analuciabolico/dragons?style=flat-square)
+[![NodeJS with Webpack](https://github.com/bolicos/dragons/workflows/pipeline/badge.svg)](https://github.com/bolicos/dragons/actions/workflows/webpack.yml)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/bolicos/dragons)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/bolicos/dragons?style=flat-square)
+![GitHub](https://img.shields.io/github/license/bolicos/dragons?style=flat-square)
 
 ---
 
@@ -24,7 +24,7 @@ This is the Dragons application website.
 
 ## Project Rules
 
-[Labels list](https://github.com/analuciabolico/dragons/labels) that used in the PR's names and also in the commit message.
+[Labels list](https://github.com/bolicos/dragons/labels) that used in the PR's names and also in the commit message.
 
 For open a new PR and create a new branch you need create a task on Board(Kanban) and convert to issue, after that follow this steps to give the corect name for your branch.
 
@@ -61,7 +61,7 @@ I will mention bellow the steps necessary to run the project locally.
 
 First step:
 ```bash
-git clone https://github.com/analuciabolico/dragons.git
+git clone https://github.com/bolicos/dragons.git
 ```
 Second step:
 ```bash
