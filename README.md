@@ -1,6 +1,6 @@
 # REACT WEBSITE **DRAGONS** <img src="https://img.icons8.com/emoji/50/000000/dragon-emoji.png"/>
 
-[![NodeJS with Webpack](https://github.com/analuciabolico/dragons/actions/workflows/pipeline/badge.svg)](https://github.com/analuciabolico/dragons/actions/workflows/webpack.yml)
+[![NodeJS with Webpack](https://github.com/bolicos/dragons/workflows/pipeline/badge.svg)](https://github.com/analuciabolico/dragons/actions/workflows/webpack.yml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/analuciabolico/dragons)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/analuciabolico/dragons?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/analuciabolico/dragons?style=flat-square)
